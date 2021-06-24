@@ -24,10 +24,10 @@ def fermer():
 def demande():
     print("Demande d'autorisation pour ouvrir la porte")
     URL="http://479791e0c179.ngrok.io/open-door/door/"+str(1)+"/prof/"+"bestofgui@gmail.com"
-    r=requests.get(URL_PROF)
+    r=requests.get(URL)
     data_etu=r.json()
     
-    if str(data_etu) == "true":
+    if str(data_etu) == "True":
         print("Demande acceptée")
         ouvrir()
         time.sleep(3)
